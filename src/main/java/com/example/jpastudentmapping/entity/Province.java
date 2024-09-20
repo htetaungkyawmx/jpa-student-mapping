@@ -1,5 +1,6 @@
 package com.example.jpastudentmapping.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
@@ -16,7 +17,7 @@ import java.util.List;
 public class Province extends IdClass{
     private String provinceName;
 
-    @OneToMany
+    @OneToMany(mappedBy = "province", cascade = CascadeType.PERSIST)
     private List<Student> students = new ArrayList<>();
 
     public Province(String provinceName) {
