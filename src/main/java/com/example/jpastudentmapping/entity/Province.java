@@ -9,6 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Province {
+public class Province extends IdClass{
+    private String provinceName;
 
 }
