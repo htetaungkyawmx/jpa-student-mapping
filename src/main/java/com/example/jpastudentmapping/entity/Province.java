@@ -12,4 +12,7 @@ import lombok.Setter;
 public class Province extends IdClass{
     private String provinceName;
 
+    public Province(String provinceName) {
+        this.provinceName = provinceName;
+    }
 }
