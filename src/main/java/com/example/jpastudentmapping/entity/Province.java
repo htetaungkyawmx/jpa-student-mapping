@@ -20,6 +20,11 @@ public class Province extends IdClass{
     @OneToMany(mappedBy = "province", cascade = CascadeType.PERSIST)
     private List<Student> students = new ArrayList<>();
 
+    public void addStudent(Student student) {
+        student.setProvince(this);
+        this.students.add(student);
+    }
+
     public Province(String provinceName) {
         this.provinceName = provinceName;
     }
