@@ -28,7 +28,7 @@ select s from Student s where s.name = :name
     Optional<Student> getStudentFormName(@Param("name") String name);
 
     @Query(value = "select * from student where name = :name", nativeQuery = true)
-    Optional<Student> getStudentFormName2(@Param("name") String name);
+    Optional<Student> getStudentFromName2(@Param("name") String name);
 
 }
 

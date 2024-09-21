@@ -28,8 +28,13 @@ public class StudentService {
         return studentDao.findAll(studentExample);
     }
 
+    public Student findStudentHighestMarksInSubject(String subjectName) {
+        return studentDao.getStudentByHighestMarkBySubject(subjectName)
+                .get();
+    }
+
     public Student findByName(String name) {
-        return studentDao.findStudentByName(name)
+        return studentDao.getStudentFromName2(name)
                 .get();
     }
 
