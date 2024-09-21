@@ -16,6 +16,13 @@ public interface StudentDao extends JpaRepository<Student, Integer>, CustomStude
     Optional<Student> findByName(String name);
 
     @Query("""
+select s from Student s join s.studentSubjects sb join sb.subject sub
+where sub.subjectName = ?1 and sb.marks = 
+(select max(subt.marks) form StudentSubject subt)
+""")
+    Optional<Student> getStudentByHighestMarkBySubject(String subjectName);
+
+    @Query("""
 select s from Student s where s.name = :name
 """)
     Optional<Student> getStudentFormName(@Param("name") String name);
