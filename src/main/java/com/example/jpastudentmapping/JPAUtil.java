@@ -5,7 +5,7 @@ import java.sql.*;
 public class JPAUtil {
 
     // Database configuration
-    public static String url = "jdbc:mysql://localhost:3306/testdb";
+    public static String url = "jdbc:mysql://localhost:3306/mx";
     public static String dbdriver = "com.mysql.cj.jdbc.Driver";
     public static String username = "root";
     public static String password = "admin";
