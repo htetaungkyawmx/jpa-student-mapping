@@ -51,6 +51,13 @@ public class StudentService {
         subject2.addStudentSubject(studentSubject2);
 
         StudentSubject studentSubject3 = new StudentSubject(70);
+        student2.addStudentSubject(studentSubject3);
+        subject2.addStudentSubject(studentSubject3);
+
+        StudentSubject studentSubject4 = new StudentSubject(92);
+        student3.addStudentSubject(studentSubject4);
+        subject3.addStudentSubject(studentSubject4);
+
 
     }
 }
