@@ -23,9 +23,11 @@ public class Subject extends IdClass{
     @OneToMany(mappedBy = "subject", cascade = CascadeType.PERSIST)
     private List<StudentSubject> studentSubjects = new ArrayList<>();
 
-    public void addStudentSubject(StudentSubject studentSubject) {
-        studentSubject.setSubject(this);
-        studentSubjects.add(studentSubject);
+    public Subject(String subjectName, String subjectCode, double fees, int durationMonth) {
+        this.subjectName = subjectName;
+        this.subjectCode = subjectCode;
+        this.fees = fees;
+        this.durationMonth = durationMonth;
     }
 
     public Subject(String subjectName, String subjectCode, double fees, int durationMonth, List<StudentSubject> studentSubjects) {
@@ -34,5 +36,10 @@ public class Subject extends IdClass{
         this.fees = fees;
         this.durationMonth = durationMonth;
         this.studentSubjects = studentSubjects;
+    }
+
+    public void addStudentSubject(StudentSubject studentSubject) {
+        studentSubject.setSubject(this);
+        studentSubjects.add(studentSubject);
     }
 }
