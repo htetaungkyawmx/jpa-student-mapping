@@ -1,9 +1,5 @@
 package com.example.jpastudentmapping.service;
 
-import com.example.jpastudentmapping.dao.ProvinceDao;
-import com.example.jpastudentmapping.dao.StudentDao;
-import com.example.jpastudentmapping.dao.StudentSubjectDao;
-import com.example.jpastudentmapping.dao.SubjectDao;
 import com.example.jpastudentmapping.entity.Province;
 import com.example.jpastudentmapping.entity.Student;
 import com.example.jpastudentmapping.entity.StudentSubject;
