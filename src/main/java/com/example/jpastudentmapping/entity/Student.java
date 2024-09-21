@@ -17,6 +17,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class Student extends IdClass{
     private String name;
     private int age;
