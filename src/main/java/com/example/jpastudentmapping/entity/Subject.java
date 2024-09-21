@@ -28,11 +28,11 @@ public class Subject extends IdClass{
         studentSubjects.add(studentSubject);
     }
 
-    public Subject(String subjectName, String subjectCode, double fees, int durationMonth) {
+    public Subject(String subjectName, String subjectCode, double fees, int durationMonth, List<StudentSubject> studentSubjects) {
         this.subjectName = subjectName;
         this.subjectCode = subjectCode;
         this.fees = fees;
         this.durationMonth = durationMonth;
+        this.studentSubjects = studentSubjects;
     }
-
 }
