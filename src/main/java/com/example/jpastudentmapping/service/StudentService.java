@@ -66,5 +66,25 @@ public class StudentService {
         student5.addStudentSubject(studentSubject6);
         subject1.addStudentSubject(studentSubject6);
 
+        provinceDao.save(province1);
+        provinceDao.save(province2);
+
+        studentDao.save(student1);
+        studentDao.save(student2);
+        studentDao.save(student3);
+        studentDao.save(student4);
+        studentDao.save(student5);
+
+        subjectDao.save(subject1);
+        subjectDao.save(subject2);
+        subjectDao.save(subject3);
+
+        studentSubjectDao.save(studentSubject1);
+        studentSubjectDao.save(studentSubject2);
+        studentSubjectDao.save(studentSubject3);
+        studentSubjectDao.save(studentSubject4);
+        studentSubjectDao.save(studentSubject5);
+        studentSubjectDao.save(studentSubject6);
+
     }
 }
