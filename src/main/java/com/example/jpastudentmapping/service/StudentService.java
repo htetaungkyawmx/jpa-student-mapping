@@ -28,6 +28,11 @@ public class StudentService {
         return studentDao.findAll(studentExample);
     }
 
+    public Student findByName(String name) {
+        return studentDao.findStudentByName(name)
+                .get();
+    }
+
     public Student getStudentByNameCustom(String name) {
         return studentDao.getStudentByName(name)
                 .orElseThrow(EntityNotFoundException::new);
