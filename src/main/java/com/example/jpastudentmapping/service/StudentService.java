@@ -10,8 +10,11 @@ import com.example.jpastudentmapping.entity.StudentSubject;
 import com.example.jpastudentmapping.entity.Subject;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -20,6 +23,10 @@ public class StudentService {
     private final StudentDao studentDao;
     private final StudentSubjectDao studentSubjectDao;
     private final SubjectDao subjectDao;
+
+    public List<Student> studentByExample(Example<Student> studentExample) {
+        return studentDao.findAll(studentExample);
+    }
 
     public Student getStudentByNameCustom(String name) {
         return studentDao.getStudentByName(name)
