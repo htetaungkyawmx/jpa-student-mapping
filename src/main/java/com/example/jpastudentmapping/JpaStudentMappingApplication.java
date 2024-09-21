@@ -1,6 +1,5 @@
 package com.example.jpastudentmapping;
 
-import com.example.jpastudentmapping.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
