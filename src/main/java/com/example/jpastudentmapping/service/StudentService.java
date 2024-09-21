@@ -1,9 +1,5 @@
 package com.example.jpastudentmapping.service;
 
-import com.example.jpastudentmapping.entity.Province;
-import com.example.jpastudentmapping.entity.Student;
-import com.example.jpastudentmapping.entity.StudentSubject;
-import com.example.jpastudentmapping.entity.Subject;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Example;
