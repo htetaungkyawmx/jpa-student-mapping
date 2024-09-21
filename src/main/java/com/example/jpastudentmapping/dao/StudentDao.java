@@ -18,7 +18,8 @@ public interface StudentDao extends JpaRepository<Student, Integer>, CustomStude
     @Query("""
 select s from Student s join s.studentSubjects sb join sb.subject sub
 where sub.subjectName = ?1 and sb.marks = 
-(select max(subt.marks) form StudentSubject subt)
+(select max(subt.marks) from StudentSubject subt where subt.subject = sub)
+order by sb.marks desc
 """)
     Optional<Student> getStudentByHighestMarkBySubject(String subjectName);
 
